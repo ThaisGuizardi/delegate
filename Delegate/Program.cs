@@ -62,6 +62,32 @@ Console.WriteLine("Print Even Ints:");
 
 PrintInts(evenInts);
 
+Console.WriteLine("\n");
+
+#endregion
+
+#region Multicast Delegates
+
+Console.WriteLine("Multicast Delegates:");
+
+Console.WriteLine("\n");
+
+MulticastDelegate multicastDelegate = MethodOne;
+
+multicastDelegate();
+
+Console.WriteLine("\n");
+
+multicastDelegate += MethodTwo;
+
+multicastDelegate();
+
+Console.WriteLine("\n");
+
+multicastDelegate -= MethodTwo;
+
+multicastDelegate();
+
 #endregion
 
 Console.Read();
@@ -78,4 +104,10 @@ static void PrintInts(List<int> ints)
         Console.WriteLine(ints[i]);
 }
 
+static void MethodOne() => Console.WriteLine("Method 01");
+
+static void MethodTwo() => Console.WriteLine("Method 02");
+
 delegate int DelegateMethod(int a, int b);
+
+delegate void MulticastDelegate();
