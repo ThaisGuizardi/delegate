@@ -10,7 +10,7 @@
 
 ## Referências
 
-- Livro: C#10 in a Nutshell The Definitive Reference - Autor: Joseph Albahari
+- Livro: C#10 in a Nutshell The Definitive Reference - Autor: Joseph Albahari - https://a.co/d/bGUGo5M
 - Macoratti - https://www.macoratti.net/11/05/c_dlg1.htm
 - Macoratti - https://www.macoratti.net/17/02/cshp_deleg1.htm
 - C# Prático - Maurício Peires: https://www.youtube.com/watch?v=Ojoo2LVsGxo
