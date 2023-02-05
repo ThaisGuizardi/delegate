@@ -16,6 +16,7 @@
 - C# Prático - Maurício Peires: https://www.youtube.com/watch?v=Ojoo2LVsGxo
 - C# Prático - Maurício Peires: https://www.youtube.com/watch?v=GPgwnXGzIQ4
 - Microsoft Learn - https://learn.microsoft.com/pt-br/dotnet/csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates
+- Generic Delegate Types (Action, Func, Predicate), in C# - Scott Steffes: https://www.youtube.com/watch?v=E-g8Ivss0Gs
 
 ## Contato Linked-in
 
