@@ -35,6 +35,7 @@ predicate = EvenNumber;
 
 resultPredicate = predicate(5);
 
+Console.WriteLine("Predicate:");
 Console.WriteLine($"Even Number: {resultPredicate}");
 
 List<int> ints = new List<int>();
@@ -46,13 +47,9 @@ ints.Add(13);
 ints.Add(14);
 ints.Add(15);
 
-Console.WriteLine("\n");
-
 Console.WriteLine("Print Ints:");
 
 PrintInts(ints);
-
-Console.WriteLine("\n");
 
 List<int> evenInts = new List<int>();
 
@@ -66,23 +63,60 @@ Console.WriteLine("\n");
 
 #endregion
 
+#region Func
+
+Console.WriteLine($"Func:");
+
+Func<int> delegteFuncOne = delegate { return 1; };
+
+int funcOne = delegteFuncOne();
+
+Console.WriteLine($"Func One: {funcOne}");
+
+Func<int, int> delegateFuncTwo = delegate (int paramOne) { return paramOne + 1; };
+
+int funcTwo = delegateFuncTwo(10);
+
+Console.WriteLine($"Func Two: {funcTwo}");
+
+Func<int, float, float> delegateFuncThree = FuncMethod;
+
+float funcThree = FuncMethod(10, 5.5f);
+
+Console.WriteLine($"Func Three: {funcThree}");
+
+Console.WriteLine("\n");
+
+#endregion
+
+#region Action
+
+Action actionOne = delegate { };
+actionOne();
+OnClompleteFunction(actionOne);
+
+Action<int> actionTwo = delegate (int paramOne) { };
+actionTwo(1);
+
+Action<int, float> actionThree = delegate (int paramOne, float paramTwo) { };
+actionThree(10, 5.5f);
+
+Action<int, float> actionFour = EmptyAction;
+actionFour(10, 5.5f);
+
+#endregion
+
 #region Multicast Delegates
 
 Console.WriteLine("Multicast Delegates:");
-
-Console.WriteLine("\n");
 
 MulticastDelegate multicastDelegate = MethodOne;
 
 multicastDelegate();
 
-Console.WriteLine("\n");
-
 multicastDelegate += MethodTwo;
 
 multicastDelegate();
-
-Console.WriteLine("\n");
 
 multicastDelegate -= MethodTwo;
 
@@ -107,6 +141,12 @@ static void PrintInts(List<int> ints)
 static void MethodOne() => Console.WriteLine("Method 01");
 
 static void MethodTwo() => Console.WriteLine("Method 02");
+
+static float FuncMethod(int a, float b) => (a + b);
+
+static void OnClompleteFunction(Action onComplete) => onComplete?.Invoke();
+
+static void EmptyAction(int paramOne, float paramTwo) { };
 
 delegate int DelegateMethod(int a, int b);
 
